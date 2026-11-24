@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>אפשר אחרת · מרכז אורי שדרות · הופק על ידי Efect</title>
+<meta name="description" content="אפשר אחרת. קמפיין ליום הבינלאומי למניעת אלימות נגד נשים, מרכז אורי ועיריית שדרות. הופק על ידי קבוצת אפקט.">
+<meta property="og:title" content="אפשר אחרת · מה שלא רואים">
+<meta property="og:description" content="חמישה סרטונים קצרים על מה שקורה מאחורי הדלת. מרכז אורי, המרכז לשלום המשפחה בשדרות.">
+<meta property="og:image" content="img/wall_poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700;800;900&display=swap">
+<style>
+/* Efect brand (2025 brand book): ink #0b0f1a, events #e53c65, impact #ff9966, care #31a7ff, tech #73787c, always in that order,
+   Noto Sans Hebrew, white surfaces, the official lockup on white at the end. Orel 24.11: white page, bold black type, red for
+   numbers and emphasis = Efect's events red; heavier weights on all small text; no pill tags; Efect portal as the loader.
+   Landing-page skills: full-screen cinematic hero (wall of the films), floating glass island nav, pill CTAs with a nested arrow
+   island, double-bezel cards, asymmetric bento, stories phone. Radius 999 / 32 / 26 / 14. */
+:root{
+  --ink:#0b0f1a; --ink2:#262b38; --muted:#4a5060; --hair:rgba(11,15,26,.09); --paper:#f8fafc; --white:#fff;
+  --red:#e53c65; --red-d:#c42a52; --red-soft:#fdecf0; --orange:#ff9966; --blue:#31a7ff; --grey:#73787c;
+  --f:"Noto Sans Hebrew","Arial Hebrew",Arial,sans-serif;
+  --spring:cubic-bezier(.32,.72,0,1); --out:cubic-bezier(.16,1,.3,1);
+  --soft:0 2px 6px rgba(11,15,26,.05),0 26px 60px -22px rgba(11,15,26,.22);
+  --max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--f);font-size:18px;font-weight:500;line-height:1.65;-webkit-font-smoothing:antialiased;font-feature-settings:"kern" 1}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.in{max-width:var(--max);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.tn{font-variant-numeric:tabular-nums lining-nums}
+h1,h2,h3{margin:0;text-wrap:balance;hyphens:none}
+h2{font-size:clamp(38px,5.2vw,68px);font-weight:900;line-height:1.02;letter-spacing:-.03em}
+p{margin:0}
+.lead{font-size:clamp(18px,1.6vw,21px);font-weight:500;color:var(--ink2);max-width:58ch}
+.sec{padding-block:clamp(88px,11vw,140px)}
+.stripe{display:flex;width:64px;height:5px;border-radius:3px;overflow:hidden;margin-bottom:22px}
+.stripe i{flex:1}.stripe i:nth-child(1){background:var(--red)}.stripe i:nth-child(2){background:var(--orange)}.stripe i:nth-child(3){background:var(--blue)}.stripe i:nth-child(4){background:var(--grey)}
+.kicker{display:block;font-size:16px;font-weight:800;color:var(--red);margin-bottom:10px}
+.skip{position:absolute;inset-inline-start:12px;top:-80px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;z-index:200;text-decoration:none}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* CTA pill with nested arrow island */
+.cta{display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:6px 26px 6px 6px;border-radius:999px;font:inherit;font-size:17px;font-weight:800;text-decoration:none;white-space:nowrap;cursor:pointer;border:0;transition:transform .5s var(--spring),background .4s var(--spring)}
+.cta:active{transform:scale(.98)}
+.cta .ic{order:2;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .5s var(--spring)}
+.cta .ic svg{width:18px;height:18px}
+.cta:hover .ic{transform:translateX(-3px) scale(1.06)}
+.cta-red{background:var(--red);color:#fff;box-shadow:0 12px 28px -10px rgba(229,60,101,.6)}.cta-red .ic{background:rgba(255,255,255,.2)}.cta-red:hover{background:var(--red-d)}
+.cta-ink{background:var(--ink);color:#fff}.cta-ink .ic{background:rgba(255,255,255,.14)}
+.cta-white{background:#fff;color:var(--ink)}.cta-white .ic{background:var(--red);color:#fff}
+.cta-glass{background:rgba(255,255,255,.14);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.38)}.cta-glass .ic{background:rgba(255,255,255,.18)}
+.cta-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}.cta-line .ic{background:var(--paper)}
+
+.bezel{padding:7px;border-radius:32px;background:rgba(11,15,26,.035);box-shadow:inset 0 0 0 1px var(--hair)}
+.core{border-radius:26px;background:#fff;box-shadow:var(--soft),inset 0 1px 0 rgba(255,255,255,.9)}
+
+/* ---------- loader: the Efect portal ---------- */
+#loader{position:fixed;inset:0;z-index:300;background:#fff;display:grid;place-items:center}
+#loader video{width:min(760px,96vw);height:auto}
+#loader button{position:absolute;bottom:calc(28px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);font:inherit;font-size:15px;font-weight:700;color:var(--muted);background:none;border:0;cursor:pointer;padding:10px 18px}
+#loader .bar4{position:absolute;inset:0 0 auto 0;height:5px;display:flex}
+#loader .bar4 i{flex:1}#loader .bar4 i:nth-child(1){background:var(--red)}#loader .bar4 i:nth-child(2){background:var(--orange)}#loader .bar4 i:nth-child(3){background:var(--blue)}#loader .bar4 i:nth-child(4){background:var(--grey)}
+
+/* ---------- floating island nav ---------- */
+.nav{position:fixed;z-index:60;top:calc(env(safe-area-inset-top,0px) + 16px);inset-inline:0;display:flex;justify-content:center;pointer-events:none;padding-inline:max(12px,env(safe-area-inset-left,0px))}
+.nav .island{pointer-events:auto;display:flex;align-items:center;gap:20px;padding:7px 7px 7px 20px;border-radius:999px;background:rgba(255,255,255,.76);backdrop-filter:blur(24px) saturate(170%);-webkit-backdrop-filter:blur(24px) saturate(170%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 10px 40px -10px rgba(11,15,26,.28);max-width:100%}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;letter-spacing:-.02em;text-decoration:none;padding-inline-start:14px;white-space:nowrap}
+.brand span{color:var(--red)}
+.brand img{height:22px;width:auto}
+.nav .links{display:flex;gap:20px;font-size:15.5px;font-weight:600}
+.nav .links a{text-decoration:none;color:var(--ink2);white-space:nowrap}
+.nav .links a:hover{color:var(--red)}
+.nav .tel{font-weight:800;color:var(--red);text-decoration:none;direction:ltr;white-space:nowrap}
+.exit{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--ink);color:#fff;font:inherit;font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap}
+.exit:hover{background:#000}
+.exit svg{width:13px;height:13px}
+
+/* ---------- hero: wall of the films ---------- */
+.hero{position:relative;min-height:min(100dvh,940px);display:grid;place-items:center;overflow:hidden;color:#fff;background:#07090e;isolation:isolate}
+.hero .wall{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 62% 58% at 50% 50%,rgba(7,9,14,.55),rgba(7,9,14,.86)),linear-gradient(180deg,rgba(7,9,14,.5),rgba(7,9,14,.25) 40%,rgba(7,9,14,.9))}
+.hero .inner{width:100%;text-align:center;padding-block:150px 190px;max-width:1000px;margin-inline:auto;padding-inline:20px}
+.hero .date{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:6px 18px 6px 6px;font-size:15.5px;font-weight:600;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.hero .date b{background:var(--red);border-radius:999px;padding:3px 13px;font-weight:900}
+.hero h1{font-size:clamp(80px,13.5vw,192px);font-weight:900;line-height:.88;letter-spacing:-.05em;margin:28px 0 26px;text-shadow:0 10px 60px rgba(0,0,0,.4)}
+.hero h1 span{color:var(--red)}
+.hero p{font-size:clamp(19px,1.8vw,23px);font-weight:500;line-height:1.55;color:rgba(255,255,255,.92);max-width:42ch;margin:0 auto}
+.hero p strong{font-weight:800;color:#fff}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:38px}
+.hero .base{position:absolute;bottom:26px;inset-inline:0;display:flex;justify-content:center;padding-inline:16px}
+.hero .base div{display:flex;gap:18px;align-items:center;padding:10px 22px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink);font-size:14px;font-weight:700}
+.hero .base img{height:34px;width:auto}
+.hero .base .sep{width:1px;height:28px;background:var(--hair)}
+.hero .base .by{display:flex;align-items:center;gap:8px;white-space:nowrap}
+.hero .base .by img{height:22px}
+
+/* ---------- paths ---------- */
+.paths .head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px 64px;align-items:end;margin-bottom:56px}
+.paths h2 em{font-style:normal;color:var(--red)}
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px}
+.b1{grid-column:span 7;grid-row:span 2}.b2,.b3{grid-column:span 5}
+.bento .bezel{display:flex}.bento .core{flex:1}
+.pcard{padding:34px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.b1 .pcard{position:relative;overflow:hidden;color:#fff;background:#111 url(img/p04.jpg) center 30%/cover;min-height:460px;justify-content:flex-end}
+.b1 .pcard::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,15,26,.1),rgba(11,15,26,.9) 70%);border-radius:inherit}
+.b1 .pcard > *{position:relative}
+.pcard h3{font-size:clamp(25px,2.3vw,31px);font-weight:900;line-height:1.2;letter-spacing:-.02em}
+.pcard p{font-size:18px;font-weight:500;color:var(--ink2);max-width:46ch}
+.b1 .pcard p{color:rgba(255,255,255,.92)}
+.pcard .act{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:10px}
+.b1 .pcard .act{margin-top:14px}
+.pcard .cta{min-height:50px;font-size:16px;padding:5px 20px 5px 5px}.pcard .cta .ic{width:40px;height:40px}
+.sosbar{grid-column:1/-1;display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));border-radius:26px;overflow:hidden;background:#fff;box-shadow:var(--soft),inset 0 0 0 1px var(--hair)}
+.sosbar p{background:var(--red);color:#fff;font-weight:900;font-size:19px;display:flex;align-items:center;padding:20px 28px}
+.sosbar a{padding:16px 24px;text-decoration:none;border-inline-start:1px solid var(--hair);display:flex;flex-direction:column;justify-content:center;transition:background .3s}
+.sosbar a:nth-of-type(1){border:0}
+.sosbar a:hover{background:var(--red-soft)}
+.sosbar b{font-size:32px;font-weight:900;color:var(--red);line-height:1.05}
+.sosbar span{font-size:15.5px;font-weight:600;color:var(--ink2)}
+.paths .note{margin-top:30px;font-size:clamp(22px,2.2vw,28px);font-weight:900;letter-spacing:-.01em}
+.paths .note span{color:var(--red)}
+
+/* ---------- forms ---------- */
+.forms{background:var(--paper)}
+.forms .grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,96px);align-items:start}
+.forms .txt p{margin-top:22px;color:var(--ink2);max-width:54ch}
+.callout{margin-top:32px}
+.callout .core{padding:26px 30px}
+.callout p{margin:0!important;font-size:21px;font-weight:800;line-height:1.45;color:var(--ink)!important}
+.callout strong{color:var(--red)}
+.list-label{font-size:19px;font-weight:800;margin-bottom:10px;color:var(--ink)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;padding-block:14px;border-bottom:1px solid rgba(11,15,26,.12)}
+.list li:first-child{border-top:2px solid var(--ink)}
+.list .w{display:flex;align-items:baseline;gap:18px;font-size:clamp(21px,2vw,25px);font-weight:800;letter-spacing:-.01em}
+.list .w i{font-style:normal;font-size:16px;font-weight:900;color:var(--red);min-width:28px}
+.chip{flex:none;display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:4px 14px 4px 4px;border-radius:999px;background:#fff;box-shadow:inset 0 0 0 1px var(--hair),0 6px 16px -10px rgba(11,15,26,.3);font-size:15px;font-weight:700;text-decoration:none;color:var(--ink2);transition:box-shadow .3s,color .3s}
+.chip img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.chip:hover{box-shadow:inset 0 0 0 2px var(--red);color:var(--red)}
+
+/* ---------- films: stories phone ---------- */
+.films{position:relative;overflow:hidden;isolation:isolate}
+.films .head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px 64px;align-items:end}
+.theater{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(36px,5vw,88px);margin-top:64px;align-items:center}
+.stage{position:relative;display:grid;place-items:center;padding-block:30px;perspective:1600px}
+.stage::before{content:"";position:absolute;width:86%;aspect-ratio:1;border-radius:50%;background:var(--poster) center/cover;filter:blur(80px) saturate(1.4);opacity:.5;z-index:-1;transition:background-image .5s}
+.stage::after{content:"";position:absolute;width:62%;aspect-ratio:1;border-radius:50%;z-index:-1;background:conic-gradient(from 200deg,var(--red),var(--orange),var(--blue),var(--grey),var(--red));filter:blur(70px);opacity:.22}
+.phone{position:relative;width:min(100%,360px);aspect-ratio:9/19;padding:12px;border-radius:60px;background:linear-gradient(145deg,#d7d9de 0%,#8d9097 18%,#2a2c31 40%,#0b0c0f 70%,#3c3e44 100%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.25),inset 0 0 0 7px #0b0c0f,0 60px 100px -30px rgba(11,15,26,.55),0 20px 40px -20px rgba(11,15,26,.35);transform:rotateY(-10deg) rotateX(4deg);transform-style:preserve-3d;transition:transform 1s var(--out);animation:float 7s ease-in-out infinite}
+.stage:hover .phone{transform:rotateY(-4deg) rotateX(2deg)}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+.phone .btn-side{position:absolute;width:4px;border-radius:2px;background:linear-gradient(90deg,#55575d,#2a2c31)}
+.phone .s1{left:-4px;top:19%;height:34px}.phone .s2{left:-4px;top:27%;height:62px}.phone .s3{left:-4px;top:38%;height:62px}.phone .s4{right:-4px;top:30%;height:92px}
+.screen{position:relative;width:100%;height:100%;border-radius:48px;overflow:hidden;background:#000}
+.screen video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.screen::after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;border-radius:inherit;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 32%,rgba(255,255,255,0) 70%,rgba(255,255,255,.06) 100%)}
+.dyn{position:absolute;z-index:6;top:12px;left:50%;transform:translateX(-50%);width:100px;height:29px;border-radius:999px;background:#000}
+.bars{position:absolute;z-index:4;top:50px;inset-inline:14px;display:flex;gap:4px;direction:rtl}
+.bars span{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.32);overflow:hidden}
+.bars span i{display:block;height:100%;width:0;background:#fff}
+.bars span.done i{width:100%}
+.sc-head{position:absolute;z-index:4;top:62px;inset-inline:14px;display:flex;align-items:center;justify-content:space-between;gap:8px;color:#fff}
+.sc-head .who{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:800}
+.sc-head .who img{width:30px;height:30px;border-radius:50%;background:#fff;padding:5px;object-fit:contain}
+.sc-head .warn{font-size:11.5px;font-weight:700;padding:4px 9px;border-radius:999px;background:rgba(0,0,0,.38);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.tapz{position:absolute;z-index:3;top:100px;bottom:120px;width:38%;border:0;background:none;cursor:pointer;padding:0}
+.tapz.r{right:0}.tapz.l{left:0}
+.sc-foot{position:absolute;z-index:4;inset-inline:0;bottom:0;padding:60px 16px 20px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.78));color:#fff;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.sc-foot b{display:block;font-size:19px;font-weight:900;line-height:1.2}
+.sc-foot small{display:block;font-size:13.5px;font-weight:600;opacity:.9}
+.sc-btn{width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);color:#fff;display:grid;place-items:center;cursor:pointer;padding:0;flex:none}
+.sc-btn svg{width:18px;height:18px}
+/* the Efect play: the mark turning through the four worlds inside a ring */
+.gate{position:absolute;z-index:7;inset:0;border:0;padding:0;margin:0;cursor:pointer;display:grid;place-items:center;align-content:center;gap:16px;color:#fff;font:inherit;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.6)),var(--poster) center/cover}
+.gate[hidden]{display:none}
+.efplay{position:relative;width:116px;height:116px;border-radius:50%;background:rgba(255,255,255,.95);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.efplay svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.efplay circle{fill:none;stroke-width:4;stroke-linecap:round;stroke-dasharray:330;animation:ringc 3.6s steps(1) infinite,ringd 3.6s linear infinite}
+.efplay img{position:absolute;left:50%;top:50%;height:46px;width:auto;transform:translate(-50%,-50%);opacity:0;animation:mk 3.6s infinite}
+.efplay img:nth-of-type(2){animation-delay:.9s}.efplay img:nth-of-type(3){animation-delay:1.8s}.efplay img:nth-of-type(4){animation-delay:2.7s}
+@keyframes mk{0%{opacity:0;transform:translate(-50%,-50%) scale(.82)}6%,22%{opacity:1;transform:translate(-50%,-50%) scale(1)}28%,100%{opacity:0;transform:translate(-50%,-50%) scale(1.06)}}
+@keyframes ringc{0%{stroke:#e53c65}25%{stroke:#ff9966}50%{stroke:#31a7ff}75%{stroke:#73787c}}
+@keyframes ringd{0%{stroke-dashoffset:330}100%{stroke-dashoffset:0}}
+.gate .lbl{font-size:17px;font-weight:800;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.float-card{position:absolute;z-index:8;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.82);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.8),0 20px 40px -16px rgba(11,15,26,.35);font-size:14px;font-weight:700;color:var(--ink2);line-height:1.35;max-width:210px}
+.float-card b{display:block;font-size:17px;font-weight:900;color:var(--ink)}
+.float-card .n{color:var(--red);font-weight:900}
+.fc1{top:16%;inset-inline-end:max(0px,calc(50% - 300px))}
+.fc2{bottom:18%;inset-inline-start:max(0px,calc(50% - 310px))}
+.side{display:grid;gap:12px;min-width:0}
+.eps{display:grid;gap:10px}
+.ep{width:100%;display:grid;grid-template-columns:44px 60px minmax(0,1fr) auto;gap:18px;align-items:center;padding:12px 20px 12px 12px;border-radius:22px;border:0;background:#fff;box-shadow:inset 0 0 0 1px var(--hair);font:inherit;color:var(--ink);text-align:start;cursor:pointer;transition:box-shadow .4s var(--spring)}
+.ep:hover{box-shadow:inset 0 0 0 1px rgba(11,15,26,.22)}
+.ep[aria-current="true"]{box-shadow:inset 0 0 0 2px var(--red),var(--soft)}
+.ep .k{font-size:25px;font-weight:900;color:var(--red)}
+.ep img{width:60px;height:76px;object-fit:cover;border-radius:12px}
+.ep b{display:block;font-size:19px;font-weight:800;line-height:1.25}
+.ep small{display:block;font-size:15.5px;font-weight:600;color:var(--muted)}
+.ep .dur{font-size:15px;font-weight:700;color:var(--muted)}
+.about .core{padding:26px 28px}
+.about .k{font-size:15.5px;font-weight:800;color:var(--red);margin-bottom:8px}
+.about h3{font-size:24px;font-weight:900;margin-bottom:8px}
+.about p{color:var(--ink2);font-weight:500}
+.about .help{margin-top:16px;padding-top:16px;border-top:1px solid var(--hair);font-size:16.5px;font-weight:600}
+.about .help a{font-weight:900;color:var(--red);text-decoration:none;white-space:nowrap}
+
+/* ---------- center ---------- */
+.center{background:var(--paper)}
+.center .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px)}
+.center h2 em{font-style:normal;color:var(--red);display:block}
+.center p{color:var(--ink2);margin-bottom:16px;max-width:54ch}
+.center .belief{color:var(--ink);font-size:clamp(22px,2vw,27px);font-weight:800;line-height:1.4;max-width:32ch;margin-top:28px}
+.svc-label{margin-top:64px;font-size:19px;font-weight:900}
+.svc{margin-top:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.svc .bezel{display:flex}.svc .core{flex:1;padding:26px 24px;display:flex;flex-direction:column;justify-content:space-between;gap:26px;min-height:160px}
+.svc .num{font-size:28px;font-weight:900;color:var(--red);line-height:1}
+.svc h3{font-size:21px;font-weight:800;line-height:1.35}
+
+/* ---------- contact ---------- */
+.contact .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(40px,6vw,88px);align-items:center}
+.contact .txt p{color:var(--ink2);max-width:52ch;margin-top:18px}
+.contact .txt p.strong{color:var(--ink);font-size:21px;font-weight:800}
+.ccard .core{padding:clamp(28px,3.4vw,40px)}
+.ccard h3{font-size:30px;font-weight:900}
+.ccard .sub{color:var(--muted);font-weight:600}
+.ccard address{font-style:normal;margin:6px 0 22px;font-weight:600}
+.nums{margin:0;padding:0;list-style:none}
+.nums li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid var(--hair)}
+.nums span{font-size:16.5px;color:var(--ink2);font-weight:700}
+.nums a{font-size:clamp(27px,2.8vw,35px);font-weight:900;color:var(--red);text-decoration:none;direction:ltr;letter-spacing:-.01em}
+.ccard .act{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+
+/* ---------- closing + Efect credit ---------- */
+.close{text-align:center;padding-block:clamp(80px,9vw,128px) clamp(56px,6vw,80px)}
+.close .big{font-size:clamp(68px,11.5vw,168px);font-weight:900;letter-spacing:-.05em;line-height:.9}
+.close .big span{color:var(--red)}
+.credit{margin:56px auto 0;display:inline-flex;flex-direction:column;align-items:center;gap:16px}
+.credit p{font-size:19px;font-weight:700;color:var(--ink2);display:flex;align-items:center;gap:8px}
+.credit p span{color:var(--red);font-size:22px;line-height:1}
+.credit img{width:min(360px,76vw);height:auto}
+.credit .web{font-size:15px;font-weight:700;color:var(--muted);direction:ltr}
+.foot-stripe{display:flex;height:6px}.foot-stripe i{flex:1}.foot-stripe i:nth-child(1){background:var(--red)}.foot-stripe i:nth-child(2){background:var(--orange)}.foot-stripe i:nth-child(3){background:var(--blue)}.foot-stripe i:nth-child(4){background:var(--grey)}
+footer{padding-block:28px 34px;font-size:15px;font-weight:600;color:var(--muted)}
+footer .in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .logos{display:flex;gap:20px;align-items:center}
+footer .logos img{height:40px;width:auto}
+footer p{max-width:62ch}
+.mbar{display:none}
+
+/* entry choreography */
+.js .rv{opacity:0;transform:translateY(40px);transition:opacity .9s var(--out),transform .9s var(--out)}
+.js .rv.on{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+.go .hero .inner > *{animation:heroUp 1.1s var(--out) both}
+.go .hero .inner > :nth-child(2){animation-delay:.08s}.go .hero .inner > :nth-child(3){animation-delay:.16s}.go .hero .inner > :nth-child(4){animation-delay:.24s}
+@keyframes heroUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,.js .rv{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;translate:none!important}#loader{display:none}}
+
+@media (max-width:1100px){.nav .links{display:none}.fc1,.fc2{display:none}}
+@media (max-width:980px){
+  .paths .head,.forms .grid,.films .head,.center .grid,.contact .grid{grid-template-columns:minmax(0,1fr)}
+  .bento{grid-template-columns:minmax(0,1fr)}.b1,.b2,.b3{grid-column:auto;grid-row:auto}.b1 .pcard{min-height:380px}
+  .theater{grid-template-columns:minmax(0,1fr)}
+  .phone{transform:none}
+  .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:720px){
+  body{font-size:17px;padding-bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+  .nav .tel,.brand img{display:none}
+  .nav .island{gap:10px;padding:6px 6px 6px 10px}
+  .brand{font-size:17px;padding-inline-start:10px}
+  .hero{min-height:auto}
+  .hero .inner{padding-block:124px 160px}
+  .hero .ctas .cta{width:100%;justify-content:space-between}
+  .hero .base div{gap:12px;padding:8px 14px;flex-wrap:wrap;justify-content:center;border-radius:22px}
+  .hero .base img{height:26px}.hero .base .sep{display:none}
+  .pcard{padding:26px}
+  .sosbar{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sosbar p{grid-column:1/-1;justify-content:center;padding:12px}
+  .sosbar a{padding:14px 12px}.sosbar b{font-size:25px}.sosbar span{font-size:13.5px}
+  .list li{flex-wrap:wrap;min-height:0}
+  .phone{width:min(100%,310px);border-radius:54px}.screen{border-radius:43px}
+  .ep{grid-template-columns:30px 50px minmax(0,1fr);gap:12px;padding:10px 14px 10px 10px}
+  .ep img{width:50px;height:64px}.ep .dur{display:none}
+  .svc{grid-template-columns:minmax(0,1fr)}.svc .core{min-height:0;flex-direction:row;align-items:center;justify-content:flex-start}
+  .mbar{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;position:fixed;z-index:60;inset:auto 0 0 0;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(255,255,255,.86);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);box-shadow:0 -1px 0 var(--hair)}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:999px;font-weight:800;text-decoration:none}
+  .mbar .c1{background:var(--red);color:#fff}.mbar .c2{box-shadow:inset 0 0 0 2px var(--ink);color:var(--ink)}
+  .mbar .exit{min-height:52px}
+}
+</style>
+</head>
+<body>
+<div id="loader" aria-hidden="true"><div class="bar4"><i></i><i></i><i></i><i></i></div><video id="portal" src="ef/portal-white.mp4" muted playsinline preload="auto"></video><button type="button" id="skipLoader">דילוג</button></div>
+<a class="skip" href="#main">דילוג לתוכן</a>
+
+<div class="nav"><div class="island">
+  <a class="brand" href="#main"><img src="ef/mark-pink.png" alt="Efect">אפשר אחרת<span>.</span></a>
+  <nav class="links" aria-label="ניווט ראשי"><a href="#paths">לדבר</a><a href="#forms">איך זה נראה</a><a href="#films">הסדרה</a><a href="#center">מרכז אורי</a></nav>
+  <a class="tel tn" href="tel:086921101">08-692-1101</a>
+  <button class="exit" type="button" data-exit aria-label="יציאה מהירה מהאתר"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>יציאה מהירה</button>
+</div></div>
+
+<main id="main">
+<header class="hero">
+  <video class="wall" src="v/wall.mp4" poster="img/wall_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <div class="inner">
+    <span class="date"><b class="tn">25.11</b>היום הבינלאומי למניעת אלימות נגד נשים</span>
+    <h1>אפשר אחרת<span>.</span></h1>
+    <p>אלימות בזוגיות יכולה להתבטא במגוון דרכים: בשגרת החיים, במילים, בהתנהגויות, בשליטה ובפחד. <strong>אנחנו מזמינים אותך לעצור, לזהות, לשאול שאלות.</strong></p>
+    <div class="ctas">
+      <a class="cta cta-white" href="#contact">דברו איתנו<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="cta cta-glass" href="#films">צפו בסרטונים<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M14 10L7 5.5v9z" fill="currentColor"/></svg></span></a>
+    </div>
+  </div>
+  <div class="base"><div>
+    <img src="img/logo-merkaz-uri.png" alt="מרכז אורי, המרכז לשלום המשפחה"><img src="img/logo-sderot.png" alt="עיריית שדרות"><img src="img/logo-welfare-ministry.png" alt="משרד הרווחה והביטחון החברתי">
+    <span class="sep"></span><span class="by">הופק על ידי <img src="ef/lockup.png" alt="Efect, הבית הישראלי לעולמות וירטואליים"></span>
+  </div></div>
+</header>
+
+<section class="sec paths" id="paths" aria-labelledby="h-paths">
+  <div class="in">
+    <div class="head rv">
+      <div><div class="stripe"><i></i><i></i><i></i><i></i></div><h2 id="h-paths">אפשר לדבר <em>על זה.</em></h2></div>
+      <p class="lead">בין אם את/ה חווה פגיעה, מזהה התנהגות פוגענית אצל עצמך או מודאג/ת מאדם קרוב: אפשר לדבר על זה.</p>
+    </div>
+    <div class="bento">
+      <div class="b1 bezel rv"><article class="core pcard"><h3>אני חווה פגיעה</h3><p>מרכז אורי מציע מרחב מקצועי, בטוח ומכבד להתבוננות ולהתמודדות עם מצבים של אלימות ופגיעה בתוך המשפחה.</p><div class="act"><a class="cta cta-red" href="tel:086921101">להתקשר למרכז<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="cta cta-glass" href="https://wa.me/972502216946" target="_blank" rel="noopener">וואטסאפ<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></article></div>
+      <div class="b2 bezel rv d1"><article class="core pcard"><h3>אני מזהה התנהגות פוגענית אצל עצמי</h3><p>המרכז נותן מענה גם למי שמזהים אצל עצמם התנהגויות פוגעניות ורוצים לקחת אחריות, ללמוד ולשנות.</p><div class="act"><a class="cta cta-ink" href="tel:086921101">להתקשר למרכז<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></article></div>
+      <div class="b3 bezel rv d2"><article class="core pcard"><h3>אני מודאג/ת ממישהו קרוב</h3><p>אנחנו כאן כדי להקשיב, לחשוב יחד ולבדוק מה יכול לעזור.</p><div class="act"><a class="cta cta-ink" href="tel:086921101">להתקשר למרכז<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></article></div>
+      <div class="sosbar rv d3" role="note" aria-label="בסכנה מיידית"><p>בסכנה מיידית?</p><a href="tel:100"><b class="tn">100</b><span>משטרה</span></a><a href="tel:1202"><b class="tn">1202</b><span>קו סיוע ארצי לנשים</span></a><a href="tel:1203"><b class="tn">1203</b><span>קו סיוע ארצי לגברים</span></a></div>
+    </div>
+    <p class="note rv">אפשר לקבל עזרה. <span>אפשר אחרת.</span></p>
+  </div>
+</section>
+
+<section class="sec forms" id="forms" aria-labelledby="h-forms">
+  <div class="in grid">
+    <div class="txt rv">
+      <div class="stripe"><i></i><i></i><i></i><i></i></div>
+      <h2 id="h-forms">איך נראית אלימות בזוגיות?</h2>
+      <p>אלימות בזוגיות היא דפוס של התנהגויות פוגעניות שבאמצעותן אחד מבני הזוג מפעיל כוח ושליטה על האחר.</p>
+      <p>התנהגויות אלה פוגעות בתחושת הביטחון, בחופש הבחירה ובעצמאות של בן או בת הזוג. הן עלולות ליצור מציאות של פחד, דריכות ותלות, שבה אדם לומד להתאים את התנהגותו כדי להימנע מתגובה פוגענית.</p>
+      <p>אלימות בזוגיות משפיעה על שני בני הזוג ועל הסביבה המשפחתית כולה, ובפרט על ילדים החשופים לדפוסים של פגיעה, פחד ושליטה.</p>
+      <div class="callout bezel"><div class="core"><p>זיהוי ההתנהגויות הפוגעניות והכרה בהן הם <strong>צעדים ראשונים</strong> בדרך ללקיחת אחריות, לקבלת עזרה וליצירת שינוי.</p></div></div>
+    </div>
+    <div class="rv d1">
+      <p class="list-label">היא יכולה להתבטא ב:</p>
+      <ul class="list">
+        <li><span class="w"><i class="tn">01</i>השפלות, הקטנה וביקורת מתמשכת</span><a class="chip" href="#films" data-film="4"><img src="img/p03.jpg" alt="">בסרט התמונה המשפחתית</a></li>
+        <li><span class="w"><i class="tn">02</i>איומים</span></li>
+        <li><span class="w"><i class="tn">03</i>שליטה כלכלית</span><a class="chip" href="#films" data-film="3"><img src="img/p02.jpg" alt="">בסרט העסקה נדחתה</a></li>
+        <li><span class="w"><i class="tn">04</i>בידוד חברתי</span><a class="chip" href="#films" data-film="5"><img src="img/p04.jpg" alt="">בסרט למה את לא עונה?</a></li>
+        <li><span class="w"><i class="tn">05</i>מעקב ופיקוח</span><a class="chip" href="#films" data-film="5"><img src="img/p04.jpg" alt="">בסרט למה את לא עונה?</a></li>
+        <li><span class="w"><i class="tn">06</i>כפייה מינית</span></li>
+        <li><span class="w"><i class="tn">07</i>פגיעה פיזית</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec films" id="films" aria-labelledby="h-films">
+  <div class="in">
+    <div class="head rv">
+      <div><div class="stripe"><i></i><i></i><i></i><i></i></div><span class="kicker">סדרת הסרטונים</span><h2 id="h-films">מה שלא רואים</h2></div>
+      <p class="lead">באמצעות סדרת סרטונים קצרים אנחנו מבקשים להאיר התנהגויות ודפוסים שלעיתים קשה לזהות בתוך שגרת החיים, לעודד שיחה ולאפשר התבוננות וקבלת עזרה.</p>
+    </div>
+    <div class="theater">
+      <div class="stage rv" id="stage">
+        <div class="float-card fc1" aria-hidden="true"><span class="n tn" id="fcN"></span><b id="fcT"></b></div>
+        <div class="float-card fc2" aria-hidden="true" id="fcS"></div>
+        <div class="phone">
+          <span class="btn-side s1"></span><span class="btn-side s2"></span><span class="btn-side s3"></span><span class="btn-side s4"></span>
+          <div class="screen" id="screen">
+            <video id="vid" playsinline preload="auto"></video>
+            <div class="dyn" aria-hidden="true"></div>
+            <div class="bars" id="bars"></div>
+            <div class="sc-head"><span class="who"><img src="ef/mark-pink.png" alt="">מרכז אורי · שדרות</span><span class="warn">הסרטון עוסק באלימות במשפחה</span></div>
+            <button class="tapz r" id="tapPrev" type="button" aria-label="הסרטון הקודם"></button>
+            <button class="tapz l" id="tapNext" type="button" aria-label="הסרטון הבא"></button>
+            <div class="sc-foot">
+              <div><b id="scT"></b><small id="scS"></small></div>
+              <div style="display:flex;gap:8px">
+                <button class="sc-btn" id="bPlay" type="button" aria-label="עצירה"><svg viewBox="0 0 20 20" aria-hidden="true"><path id="pPlay" d="M6 4h3v12H6zM11 4h3v12h-3z" fill="currentColor"/></svg></button>
+                <button class="sc-btn" id="bSound" type="button" aria-label="השתקה"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8h3l5-4v12l-5-4H3z" fill="currentColor"/><path id="pSound" d="M14 6.5a5 5 0 0 1 0 7M16.5 4a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg></button>
+              </div>
+            </div>
+            <button class="gate" id="gate" type="button" aria-label="הפעלת הסרטון">
+              <span class="efplay"><svg viewBox="0 0 116 116" aria-hidden="true"><circle cx="58" cy="58" r="52.5"/></svg><img src="ef/mark-pink.png" alt=""><img src="ef/mark-orange.png" alt=""><img src="ef/mark-blue.png" alt=""><img src="ef/mark-grey.png" alt=""></span>
+              <span class="lbl">לחצו לצפייה</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="side rv d1">
+        <div class="eps" id="eps" role="list"></div>
+        <div class="about bezel" aria-live="polite"><div class="core"><p class="k" id="aboutK"></p><h3 id="aboutH"></h3><p id="aboutP"></p><p class="help">אם זה מוכר לך, מרכז אורי כאן: <a class="tn" href="tel:086921101">08-692-1101</a> · וואטסאפ <a class="tn" href="https://wa.me/972502216946" target="_blank" rel="noopener">050-221-6946</a></p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec center" id="center" aria-labelledby="h-center">
+  <div class="in">
+    <div class="grid">
+      <div class="rv"><div class="stripe"><i></i><i></i><i></i><i></i></div><span class="kicker">מרכז אורי</span><h2 id="h-center">יש מקום לעצור.<em>יש מקום לדבר.</em></h2></div>
+      <div class="rv d1">
+        <p>מרכז אורי, המרכז לשלום המשפחה בשדרות, מציע מרחב מקצועי, בטוח ומכבד להתבוננות ולהתמודדות עם מצבים של אלימות ופגיעה בתוך המשפחה.</p>
+        <p>המרכז נותן מענה לנשים ולגברים המתמודדים עם פגיעה ואלימות במערכת היחסים הזוגית, וגם למי שמזהים אצל עצמם התנהגויות פוגעניות ורוצים לקחת אחריות, ללמוד ולשנות.</p>
+        <p class="belief">אנחנו מאמינים באפשרות לשינוי, ובחשיבות של יצירת מרחב שבו אפשר לדבר על הדברים בכנות, ללא שיפוטיות ועם ליווי מקצועי.</p>
+      </div>
+    </div>
+    <p class="svc-label rv">שירותי המרכז</p>
+    <div class="svc">
+      <div class="bezel rv"><div class="core"><span class="num tn">01</span><h3>טיפול פרטני בנשים ובגברים</h3></div></div>
+      <div class="bezel rv d1"><div class="core"><span class="num tn">02</span><h3>טיפול קבוצתי</h3></div></div>
+      <div class="bezel rv d2"><div class="core"><span class="num tn">03</span><h3>טיפול בילדים</h3></div></div>
+      <div class="bezel rv d3"><div class="core"><span class="num tn">04</span><h3>ייעוץ וליווי בזמן משבר</h3></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact" aria-labelledby="h-contact">
+  <div class="in grid">
+    <div class="txt rv">
+      <div class="stripe"><i></i><i></i><i></i><i></i></div>
+      <h2 id="h-contact">אולי משהו כאן מוכר לך?</h2>
+      <p>אולי משהו ממה שקראת או ראית כאן מוכר לך. אולי את/ה מודאג/ת ממישהו קרוב, או מתחיל/ה לזהות דפוסים בהתנהגות שלך שהיית רוצה לשנות.</p>
+      <p class="strong">לא צריך לדעת מראש מה להגיד, ולא צריך להיות בטוחים כדי לפנות.</p>
+      <p>אנחנו כאן כדי להקשיב, לחשוב יחד ולבדוק מה יכול לעזור.</p>
+    </div>
+    <div class="ccard bezel rv d1"><div class="core">
+      <h3>מרכז אורי</h3>
+      <p class="sub">המרכז לשלום המשפחה</p>
+      <address>אריאל שרון 19, בניין A, קומה 5, שדרות</address>
+      <ul class="nums">
+        <li><span>טלפון</span><a class="tn" href="tel:086921101">08-692-1101</a></li>
+        <li><span>WhatsApp</span><a class="tn" href="https://wa.me/972502216946" target="_blank" rel="noopener">050-221-6946</a></li>
+      </ul>
+      <div class="act"><a class="cta cta-red" href="tel:086921101">להתקשר עכשיו<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="cta cta-line" href="https://wa.me/972502216946" target="_blank" rel="noopener">לכתוב בוואטסאפ<span class="ic"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 5l-5 5 5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+    </div></div>
+  </div>
+</section>
+
+<section class="close" aria-label="סיום">
+  <div class="in">
+    <p class="big">אפשר אחרת<span>.</span></p>
+    <div class="credit rv"><p>הופק ב<span>&#10084;</span>על ידי קבוצת אפקט</p><a href="https://efct.co.il" target="_blank" rel="noopener"><img src="ef/lockup.png" alt="Efect, הבית הישראלי לעולמות וירטואליים"></a><span class="web">efct.co.il · @efct.il</span></div>
+  </div>
+</section>
+</main>
+
+<div class="foot-stripe" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<footer>
+  <div class="in">
+    <div class="logos"><img src="img/logo-merkaz-uri.png" alt="מרכז אורי"><img src="img/logo-sderot.png" alt="עיריית שדרות"><img src="img/logo-welfare-ministry.png" alt="משרד הרווחה והביטחון החברתי"></div>
+    <p>הסרטונים הופקו על ידי קבוצת אפקט בשיתוף עיריית שדרות, בעזרת בינה מלאכותית. הדמויות והסיפורים בסרטונים הם בדיוניים.</p>
+  </div>
+</footer>
+
+<div class="mbar" aria-label="פעולות מהירות"><a class="c1" href="tel:086921101">להתקשר</a><a class="c2" href="https://wa.me/972502216946" target="_blank" rel="noopener">וואטסאפ</a><button class="exit" type="button" data-exit aria-label="יציאה מהירה מהאתר">יציאה</button></div>
+
+<script>
+document.documentElement.classList.add('js');
+const $=id=>document.getElementById(id),pad=n=>String(n).padStart(2,'0');
+/* ---------- loader: Efect portal, once per visit, skippable ---------- */
+(function(){
+  const L=$('loader'),v=$('portal');let seen=false;
+  try{seen=sessionStorage.getItem('efPortal')==='1'}catch(e){}
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function open(){if(!L.isConnected)return;try{sessionStorage.setItem('efPortal','1')}catch(e){}
+    const R=Math.hypot(innerWidth,innerHeight)/2+30,s=performance.now();document.documentElement.classList.add('go');
+    (function step(t){const u=Math.min(1,(t-s)/800),r=u*u*u*R,m=`radial-gradient(circle at 50% 50%, transparent ${Math.max(0,r-2)}px, #000 ${r}px)`;L.style.webkitMaskImage=m;L.style.maskImage=m;u<1?requestAnimationFrame(step):L.remove()})(s);}
+  if(seen||reduce){L.remove();document.documentElement.classList.add('go');return}
+  v.playbackRate=1.35;v.play().catch(()=>setTimeout(open,600));
+  v.addEventListener('ended',()=>setTimeout(open,250));
+  $('skipLoader').onclick=open;setTimeout(open,7000);
+})();
+/* ---------- reveals ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv').forEach(el=>el.classList.add('on')),9000);
+/* ---------- films: Efect's order and texts ---------- */
+const FILMS=[
+ {t:'הדלת החצי פתוחה',s:'העברה בין-דורית של דפוסי אלימות',d:'0:31',p:'img/p05.jpg',v:'v/f05.mp4',
+  a:'ברגע אחד, מול בנו המבוהל, אב מזהה את עצמו כילד, עומד מאחורי אותה דלת, מול אביו שלו. דפוסי אלימות ופחד עלולים לעבור מדור לדור, אך הם אינם גזירת גורל. ההכרה בדפוסים ובמקורות שלהם יכולה להיות התחלה של לקיחת אחריות ושל בחירה בדרך אחרת.'},
+ {t:'הם כבר יודעים',s:'חשיפה של ילדים לאלימות בין ההורים',d:'0:38',p:'img/p01.jpg',v:'v/f01.mp4',
+  a:'היא רק בת שמונה, אבל כבר יודעת לזהות את הטון, לקחת את אחיה הקטן לחדר ולסגור את הדלת בשקט. ילדים החשופים לאלימות בין הוריהם חיים בתוך מציאות של פחד וחוסר ביטחון, גם כשהפגיעה אינה מופנית ישירות כלפיהם. הסרטון מזכיר לנו שגם ילדים שרק עדים לאלימות הם נפגעים שלה.'},
+ {t:'העסקה נדחתה',s:'שליטה ואלימות כלכלית',d:'0:30',p:'img/p02.jpg',v:'v/f02.mp4',
+  a:'הקנייה בסופר הופכת למבחן: כל הוצאה דורשת אישור, כל מוצר מצריך הסבר וכל החלטה נמצאת תחת פיקוח. שליטה כלכלית היא דרך לצמצם את העצמאות, החופש ויכולת הבחירה של בן או בת הזוג. גם כשהיא מתרחשת בשקט, היא אלימות.'},
+ {t:'התמונה המשפחתית',s:'השפלה והקטנה רגשית',d:'0:31',p:'img/p03.jpg',v:'v/f03.mp4',
+  a:'בתמונה המשפחתית כולם מחייכים, אבל מאחורי החיוך מסתתרת מציאות אחרת. הערות מקטינות, ביטול, השפלה ושלילת המקום של בן או בת הזוג עלולים להפוך לדפוס מתמשך של פגיעה רגשית. כשהילדים צופים בהתנהגויות האלה ואף מחקים אותן, הפגיעה חורגת מגבולות הזוגיות.'},
+ {t:'למה את לא עונה?',s:'קנאה אובססיבית, מעקב ושליטה',d:'0:43',p:'img/p04.jpg',v:'v/f04.mp4',
+  a:'היא יצאה לבלות עם חברות, אבל במקום ליהנות היא עסוקה במענה להודעות, בשליחת תמונות ובהוכחה היכן היא נמצאת ועם מי. כשהדאגה הופכת לחקירה, כשהקנאה מכתיבה את ההתנהלות וכשאין מרחב אישי, זו כבר לא אהבה, אלא שליטה.'}
+];
+const vid=$('vid'),eps=$('eps'),stage=$('stage'),gate=$('gate'),bars=$('bars');
+let cur=0,started=false,soundOn=true,token=0;const cache={};
+eps.innerHTML=FILMS.map((f,i)=>`<button class="ep" type="button" role="listitem" data-i="${i}" aria-current="false"><span class="k tn">${pad(i+1)}</span><img src="${f.p}" alt=""><span><b>${f.t}</b><small>${f.s}</small></span><span class="dur tn">${f.d}</span></button>`).join('');
+bars.innerHTML=FILMS.map(()=>'<span><i></i></span>').join('');
+function srcFor(f){if(cache[f.v])return Promise.resolve(cache[f.v]);return fetch(f.v).then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>cache[f.v]=URL.createObjectURL(b)).catch(()=>f.v)}
+function paintBars(){[...bars.children].forEach((b,i)=>{b.classList.toggle('done',i<cur);b.firstChild.style.width=i<cur?'100%':'0'})}
+async function pick(i,play){
+  cur=(i+FILMS.length)%FILMS.length;const f=FILMS[cur],my=++token;
+  eps.querySelectorAll('.ep').forEach(b=>b.setAttribute('aria-current',String(+b.dataset.i===cur)));
+  $('aboutK').textContent=`סרטון ${pad(cur+1)} מתוך 05`;$('aboutH').textContent=f.t;$('aboutP').textContent=f.a;
+  $('scT').textContent=f.t;$('scS').textContent=f.s;$('fcN').textContent=`סרטון ${pad(cur+1)} מתוך 05`;$('fcT').textContent=f.t;$('fcS').textContent=f.s;
+  stage.style.setProperty('--poster',`url(${f.p})`);gate.style.setProperty('--poster',`url(${f.p})`);paintBars();
+  vid.pause();vid.poster=f.p;
+  if(!(play||started)){gate.hidden=false;vid.removeAttribute('src');srcFor(f);return}
+  started=true;gate.hidden=true;const src=await srcFor(f);if(my!==token)return;
+  vid.src=src;vid.muted=!soundOn;vid.play().catch(()=>{vid.muted=true;vid.play().catch(()=>{})});setIcons();srcFor(FILMS[(cur+1)%FILMS.length]);
+}
+function setIcons(){$('pPlay').setAttribute('d',vid.paused?'M15 10L6 4v12z':'M6 4h3v12H6zM11 4h3v12h-3z');$('bPlay').setAttribute('aria-label',vid.paused?'ניגון':'עצירה');
+  $('pSound').setAttribute('d',vid.muted?'M14 7l4 6M18 7l-4 6':'M14 6.5a5 5 0 0 1 0 7M16.5 4a8.5 8.5 0 0 1 0 12');$('bSound').setAttribute('aria-label',vid.muted?'הפעלת קול':'השתקה')}
+gate.onclick=()=>{soundOn=true;pick(cur,true)};
+$('bPlay').onclick=()=>{if(!started)return pick(cur,true);vid.paused?vid.play().catch(()=>{}):vid.pause()};
+$('bSound').onclick=()=>{soundOn=vid.muted;vid.muted=!soundOn;setIcons()};
+$('tapNext').onclick=()=>pick(cur+1,true);$('tapPrev').onclick=()=>pick(cur-1,true);
+['play','pause','volumechange'].forEach(ev=>vid.addEventListener(ev,setIcons));
+vid.addEventListener('timeupdate',()=>{const b=bars.children[cur];if(b&&vid.duration)b.firstChild.style.width=(vid.currentTime/vid.duration*100)+'%'});
+vid.addEventListener('ended',()=>pick(cur+1,true));
+eps.addEventListener('click',e=>{const b=e.target.closest('.ep');if(b)pick(+b.dataset.i,true)});
+document.querySelectorAll('[data-film]').forEach(a=>a.addEventListener('click',()=>pick(+a.dataset.film-1,false)));
+pick(0,false);
+/* ---------- quick exit ---------- */
+function leave(){try{vid.pause()}catch(e){}window.location.replace('https://www.google.com/search?q=%D7%9E%D7%96%D7%92+%D7%90%D7%95%D7%95%D7%99%D7%A8')}
+document.querySelectorAll('[data-exit]').forEach(b=>b.addEventListener('click',leave));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')leave()});
+</script>
+</body>
+</html>
