@@ -128,7 +128,7 @@ p{margin:0}
 
 /* ---------- forms ---------- */
 .forms{background:var(--paper)}
-.forms .grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,96px);align-items:start}
+.forms .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px);align-items:start}
 .forms .txt p{margin-top:22px;color:var(--ink2);max-width:54ch}
 .callout{margin-top:32px}
 .callout .core{padding:26px 30px}
@@ -267,6 +267,7 @@ footer p{max-width:62ch}
   .paths .head,.forms .grid,.films .head,.center .grid,.contact .grid{grid-template-columns:minmax(0,1fr)}
   .bento{grid-template-columns:minmax(0,1fr)}.b1,.b2,.b3{grid-column:auto;grid-row:auto}.b1 .pcard{min-height:380px}
   .theater{grid-template-columns:minmax(0,1fr)}
+  .forms .txt{order:-1}
   .phone{transform:none}
   .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
@@ -343,25 +344,25 @@ footer p{max-width:62ch}
 
 <section class="sec forms" id="forms" aria-labelledby="h-forms">
   <div class="in grid">
-    <div class="txt rv">
+    <div class="rv">
+      <p class="list-label">היא יכולה להתבטא ב:</p>
+      <ul class="list">
+        <li><span class="w"><i class="tn">1</i>השפלות, הקטנה וביקורת מתמשכת</span></li>
+        <li><span class="w"><i class="tn">2</i>איומים</span></li>
+        <li><span class="w"><i class="tn">3</i>שליטה כלכלית</span></li>
+        <li><span class="w"><i class="tn">4</i>בידוד חברתי</span></li>
+        <li><span class="w"><i class="tn">5</i>מעקב ופיקוח</span></li>
+        <li><span class="w"><i class="tn">6</i>כפייה מינית</span></li>
+        <li><span class="w"><i class="tn">7</i>פגיעה פיזית</span></li>
+      </ul>
+    </div>
+    <div class="txt rv d1">
       <div class="stripe"><i></i><i></i><i></i><i></i></div>
       <h2 id="h-forms">איך נראית אלימות בזוגיות?</h2>
       <p>אלימות בזוגיות היא דפוס של התנהגויות פוגעניות שבאמצעותן אחד מבני הזוג מפעיל כוח ושליטה על האחר.</p>
       <p>התנהגויות אלה פוגעות בתחושת הביטחון, בחופש הבחירה ובעצמאות של בן או בת הזוג. הן עלולות ליצור מציאות של פחד, דריכות ותלות, שבה אדם לומד להתאים את התנהגותו כדי להימנע מתגובה פוגענית.</p>
       <p>אלימות בזוגיות משפיעה על שני בני הזוג ועל הסביבה המשפחתית כולה, ובפרט על ילדים החשופים לדפוסים של פגיעה, פחד ושליטה.</p>
       <div class="callout bezel"><div class="core"><p>זיהוי ההתנהגויות הפוגעניות והכרה בהן הם <strong>צעדים ראשונים</strong> בדרך ללקיחת אחריות, לקבלת עזרה וליצירת שינוי.</p></div></div>
-    </div>
-    <div class="rv d1">
-      <p class="list-label">היא יכולה להתבטא ב:</p>
-      <ul class="list">
-        <li><span class="w"><i class="tn">01</i>השפלות, הקטנה וביקורת מתמשכת</span><a class="chip" href="#films" data-film="4"><img src="img/p03.jpg" alt="">בסרט התמונה המשפחתית</a></li>
-        <li><span class="w"><i class="tn">02</i>איומים</span></li>
-        <li><span class="w"><i class="tn">03</i>שליטה כלכלית</span><a class="chip" href="#films" data-film="3"><img src="img/p02.jpg" alt="">בסרט העסקה נדחתה</a></li>
-        <li><span class="w"><i class="tn">04</i>בידוד חברתי</span><a class="chip" href="#films" data-film="5"><img src="img/p04.jpg" alt="">בסרט למה את לא עונה?</a></li>
-        <li><span class="w"><i class="tn">05</i>מעקב ופיקוח</span><a class="chip" href="#films" data-film="5"><img src="img/p04.jpg" alt="">בסרט למה את לא עונה?</a></li>
-        <li><span class="w"><i class="tn">06</i>כפייה מינית</span></li>
-        <li><span class="w"><i class="tn">07</i>פגיעה פיזית</span></li>
-      </ul>
     </div>
   </div>
 </section>
@@ -419,10 +420,10 @@ footer p{max-width:62ch}
     </div>
     <p class="svc-label rv">שירותי המרכז</p>
     <div class="svc">
-      <div class="bezel rv"><div class="core"><span class="num tn">01</span><h3>טיפול פרטני בנשים ובגברים</h3></div></div>
-      <div class="bezel rv d1"><div class="core"><span class="num tn">02</span><h3>טיפול קבוצתי</h3></div></div>
-      <div class="bezel rv d2"><div class="core"><span class="num tn">03</span><h3>טיפול בילדים</h3></div></div>
-      <div class="bezel rv d3"><div class="core"><span class="num tn">04</span><h3>ייעוץ וליווי בזמן משבר</h3></div></div>
+      <div class="bezel rv"><div class="core"><span class="num tn">1</span><h3>טיפול פרטני בנשים ובגברים</h3></div></div>
+      <div class="bezel rv d1"><div class="core"><span class="num tn">2</span><h3>טיפול קבוצתי</h3></div></div>
+      <div class="bezel rv d2"><div class="core"><span class="num tn">3</span><h3>טיפול בילדים</h3></div></div>
+      <div class="bezel rv d3"><div class="core"><span class="num tn">4</span><h3>ייעוץ וליווי בזמן משבר</h3></div></div>
     </div>
   </div>
 </section>
@@ -502,15 +503,15 @@ const FILMS=[
 ];
 const vid=$('vid'),eps=$('eps'),stage=$('stage'),gate=$('gate'),bars=$('bars');
 let cur=0,started=false,soundOn=true,token=0;const cache={};
-eps.innerHTML=FILMS.map((f,i)=>`<button class="ep" type="button" role="listitem" data-i="${i}" aria-current="false"><span class="k tn">${pad(i+1)}</span><img src="${f.p}" alt=""><span><b>${f.t}</b><small>${f.s}</small></span><span class="dur tn">${f.d}</span></button>`).join('');
+eps.innerHTML=FILMS.map((f,i)=>`<button class="ep" type="button" role="listitem" data-i="${i}" aria-current="false"><span class="k tn">${i+1}</span><img src="${f.p}" alt=""><span><b>${f.t}</b><small>${f.s}</small></span><span class="dur tn">${f.d}</span></button>`).join('');
 bars.innerHTML=FILMS.map(()=>'<span><i></i></span>').join('');
 function srcFor(f){if(cache[f.v])return Promise.resolve(cache[f.v]);return fetch(f.v).then(r=>{if(!r.ok)throw 0;return r.blob()}).then(b=>cache[f.v]=URL.createObjectURL(b)).catch(()=>f.v)}
 function paintBars(){[...bars.children].forEach((b,i)=>{b.classList.toggle('done',i<cur);b.firstChild.style.width=i<cur?'100%':'0'})}
 async function pick(i,play){
   cur=(i+FILMS.length)%FILMS.length;const f=FILMS[cur],my=++token;
   eps.querySelectorAll('.ep').forEach(b=>b.setAttribute('aria-current',String(+b.dataset.i===cur)));
-  $('aboutK').textContent=`סרטון ${pad(cur+1)} מתוך 05`;$('aboutH').textContent=f.t;$('aboutP').textContent=f.a;
-  $('scT').textContent=f.t;$('scS').textContent=f.s;$('fcN').textContent=`סרטון ${pad(cur+1)} מתוך 05`;$('fcT').textContent=f.t;$('fcS').textContent=f.s;
+  $('aboutK').textContent=`סרטון ${cur+1} מתוך 5`;$('aboutH').textContent=f.t;$('aboutP').textContent=f.a;
+  $('scT').textContent=f.t;$('scS').textContent=f.s;$('fcN').textContent=`סרטון ${cur+1} מתוך 5`;$('fcT').textContent=f.t;$('fcS').textContent=f.s;
   stage.style.setProperty('--poster',`url(${f.p})`);gate.style.setProperty('--poster',`url(${f.p})`);paintBars();
   vid.pause();vid.poster=f.p;
   if(!(play||started)){gate.hidden=false;vid.removeAttribute('src');srcFor(f);return}
